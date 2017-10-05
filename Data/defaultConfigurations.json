@@ -1,0 +1,10 @@
+{
+    "Version": "0.0.1",
+    "Logging": {
+        "DefaultLogType": "console",
+        "EventLoggingRules": {
+            "TickEvent": "none",
+            "QuitEvent": "none"
+        }
+    }
+}
