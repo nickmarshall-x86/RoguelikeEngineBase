@@ -10,7 +10,7 @@ class ViewInitializationController(ControllerBase):
         pygame.init()
 
     def Notify(self, event):
-        if isinstance(event, Events.TickEvent) and not self.IsViewInitialized:
+        if isinstance(event, Events.TickEvent) and self.IsViewInitialized == False:
             self.Window = pygame.display.set_mode(self.Configs.Video.WindowSize)
             self.IsViewInitialized = True
-            
+            super(ViewInitializationController, self).Post(Events.ViewInitializedEvent(self.Window))

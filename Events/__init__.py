@@ -4,3 +4,5 @@ from tickEvent import TickEvent
 from quitEvent import QuitEvent
 from keyboardInputEvent import KeyboardInputEvent
 from mouseInputEvent import MouseInputEvent
+from viewInitializedEvent import ViewInitializedEvent
+from logEvent import LogEvent

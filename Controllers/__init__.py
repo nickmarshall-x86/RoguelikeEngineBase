@@ -1,3 +1,7 @@
 from clockController import ClockController
 from logController import LogController
 from stateController import StateController
+from inputController import InputController
+from dungeonCommandController import DungeonCommandController
+from viewInitializationController import ViewInitializationController
+from dungeonViewController import DungeonViewController

@@ -1,12 +1,13 @@
 {
     "Version": "0.0.1",
     "Logging": {
-        "DefaultLogType": "console",
+        "DefaultLogType": "file",
+        "BufferSize": 10,
         "EventLoggingRules": {
             "TickEvent": "none",
-            "QuitEvent": "none",
-            "KeyboardInputEvent": "console",
-            "MouseInputEvent": "console"
+            "QuitEvent": "console",
+            "KeyboardInputEvent": "none",
+            "MouseInputEvent": "none"
         }
     },
     "Video": {

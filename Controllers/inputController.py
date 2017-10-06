@@ -9,15 +9,22 @@ import constants as C
 class InputController(ControllerBase):
     def __init__(self, mediator, configuration):
         super(InputController, self).__init__("InputController", mediator, configuration)
+        self.PyGameEventMappings = {
+            pygame.MOUSEBUTTONDOWN: C.INPUTEVENT_MOUSEDOWN,
+            pygame.MOUSEBUTTONUP: C.INPUTEVENT_MOUSEUP,
+            pygame.MOUSEMOTION: C.INPUTEVENT_MOUSEMOVE,
+            pygame.KEYDOWN: C.INPUTEVENT_KEYDOWN,
+            pygame.KEYUP: C.INPUTEVENT_KEYUP
+        }
 
     def ProcessPyGameEvent(self, pgEvent):
         if pgEvent.type in [pygame.KEYDOWN, pygame.KEYUP]:
-            return Events.KeyboardInputEvent(pgEvent.type, pgEvent.key)
+            return Events.KeyboardInputEvent(self.PyGameEventMappings[pgEvent.type], pgEvent.key)
         
         # If MOUSEMOTION floods the inputs, then we will need to filter MOUSEMOTION only when button is depressed
         if pgEvent.type in [pygame.MOUSEBUTTONDOWN, pygame.MOUSEMOTION, pygame.MOUSEBUTTONUP]:
             x, y = pgEvent.pos
-            return Events.MouseInputEvent(pgEvent.type, pygame.mouse.get_pressed(), x, y)
+            return Events.MouseInputEvent(self.PyGameEventMappings[pgEvent.type], pygame.mouse.get_pressed(), x, y)
 
         return None
 

@@ -27,6 +27,10 @@ class LoggingConfiguration():
     def DefaultLogType(self):
         return self.Configs[C.CFG_LOGGING_KEY_DEFAULT_TYPE]
 
+    @property
+    def BufferSize(self):
+        return self.Configs[C.CFG_LOGGING_KEY_BUFFERSIZE]
+
     def GetLoggingTypeForEvent(self, eventName):
         if eventName in self.Configs[C.CFG_LOGGING_KEY_EVENT_RULES]:
             return self.Configs[C.CFG_LOGGING_KEY_EVENT_RULES][eventName]
