@@ -12,7 +12,8 @@ def LoadConfiguration():
 
 if __name__ == '__main__':
     configuration = LoadConfiguration()
-    
+    print "Initializing Engine Version {0}".format(configuration.Version)
+
     mediator = EventMediator()
 
     clockController = Controllers.ClockController(mediator, configuration)

@@ -4,7 +4,13 @@
         "DefaultLogType": "console",
         "EventLoggingRules": {
             "TickEvent": "none",
-            "QuitEvent": "none"
+            "QuitEvent": "none",
+            "KeyboardInputEvent": "console",
+            "MouseInputEvent": "console"
         }
+    },
+    "Video": {
+        "WindowX": 800,
+        "WindowY": 600
     }
 }

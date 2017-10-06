@@ -1,17 +1,22 @@
-class Constants:
-    CFG_KEY_VERSION = 'Version'
-    CFG_KEY_LOGGING = 'Logging'
+CFG_KEY_VERSION = 'Version'
+CFG_KEY_LOGGING = 'Logging'
+CFG_KEY_VIDEO = "Video"
 
-    CFG_LOGGING_KEY_DEFAULT_TYPE = 'DefaultLogType'
-    CFG_LOGGING_KEY_EVENT_RULES = 'EventLoggingRules'
+CFG_LOGGING_KEY_DEFAULT_TYPE = 'DefaultLogType'
+CFG_LOGGING_KEY_EVENT_RULES = 'EventLoggingRules'
 
-    DEBUG_INFO_KEY_CONTROLLER_NAME = "ControllerName"
-    DEBUG_INFO_KEY_EVENT_TIME = "EventTime"
+DEBUG_INFO_KEY_CONTROLLER_NAME = "ControllerName"
+DEBUG_INFO_KEY_EVENT_TIME = "EventTime"
 
-    CFG_LOGGING_DEFAULTLOGTYPE_CONSOLE = "console"
-    CFG_LOGGING_DEFAULTLOGTYPE_FILE = "file"
+CFG_LOGGING_DEFAULTLOGTYPE_CONSOLE = "console"
+CFG_LOGGING_DEFAULTLOGTYPE_FILE = "file"
 
-    STATE_STARTUP = "Starting"
-    STATE_RUNNING = "Running"
+CFG_VIDEO_WINDOWX = "WindowX"
+CFG_VIDEO_WINDOWY = "WindowY"
 
-    CONTROLLER_LOGGING = "LogController"
+STATE_STARTUP = "Starting"
+STATE_RUNNING = "Running"
+
+CONTROLLER_LOGGING = "LogController"
+CONTROLLER_INPUT = "InputController"
+CONTROLLER_VIEW_INIT = "ViewInitializationController"

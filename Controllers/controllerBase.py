@@ -1,4 +1,5 @@
 import datetime
+import constants as C
 
 class ControllerBase(object):
     def __init__(self, controllerName, mediator, configurations):
@@ -12,8 +13,8 @@ class ControllerBase(object):
 
     def Post(self, event):
         event.DebugInformation = {
-            self.Configs.Constants.DEBUG_INFO_KEY_CONTROLLER_NAME: self.ControllerName,
-            self.Configs.Constants.DEBUG_INFO_KEY_EVENT_TIME: datetime.datetime.now()
+            C.DEBUG_INFO_KEY_CONTROLLER_NAME: self.ControllerName,
+            C.DEBUG_INFO_KEY_EVENT_TIME: datetime.datetime.now()
         }
 
         self.Mediator.Post(event)
